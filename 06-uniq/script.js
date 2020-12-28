@@ -9,6 +9,25 @@
 
 function uniq(arr) {
     // Напишите код здесь
+    for (let i = 0; i < arr.length; i++) {
+        for (let n = i + 1 ; n < arr.length; n++) {
+            if (arr[i] == arr[n]) {
+                if (arr[n + 1] != arr[i]) {
+                arr.splice(n, 1);
+                } else {
+                    let x = 1;
+                    let y = n + 1;
+                    while (arr[y] == arr[i]) {
+                        x++;
+                        y++;
+                    }
+                    arr.splice(n, x);
+                }
+            }
+            
+        }             
+    }
+    return arr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

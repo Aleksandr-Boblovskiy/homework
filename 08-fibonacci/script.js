@@ -10,6 +10,19 @@
 
 function fibonacci(n) {
     // Напишите код здесь
+
+    let fib = [0, 1];
+    let i = 2;
+
+    if (n == 0 ||  n == 1) {
+        return fib[n - 1];  
+    }
+
+    for (i; i <= n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2]; 
+    }
+
+    return fib[n - 1];
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

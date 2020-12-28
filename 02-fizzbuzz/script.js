@@ -12,6 +12,20 @@
 
 function fizzBuzz(num) {
     // Напишите код здесь
+    let out = '';
+    for (let i = 1; i <= num; i++) {
+        if ((i % 3) == 0) {
+            out = 'fizz';
+        }
+        if ((i % 5) == 0) {
+            out = out + 'buzz';
+        }
+        if (out == '') {
+            out = i;
+        }
+        console.log(out);
+        out = '';
+    };
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

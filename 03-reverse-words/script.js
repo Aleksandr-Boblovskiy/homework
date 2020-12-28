@@ -10,6 +10,20 @@
 
 function reverseWords(str) {
     // Напишите код здесь
+    let temp = '';
+    let out = '';
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == ' ') {
+            temp = str[i] + temp;
+            out = temp + out;
+            temp = '';   
+        }
+        else {
+        temp = temp + str[i];
+        }     
+    }    
+    out = temp + out;
+    return out;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

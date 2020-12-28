@@ -8,10 +8,19 @@
 */
 
 function intersection(arr1, arr2) {
-    // Напишите код здесь
+  // Напишите код здесь
+  let arr3 = [];
+  for (let i of arr1) {
+    for (let n of arr2) {
+      if (i == n && arr3.indexOf(i) == -1) {
+        arr3[arr3.length] = i;
+      }
+    }
+  }
+  return arr3;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(intersection([1, 5, 4, 2], [8, 91, 4, 1, 3])); // [4, 1]
-console.log(intersection([1, 5, 4, 2], [7, 12])); // []
+console.log(intersection([1, 5, 4, 2], [7, 12])); // [] 
